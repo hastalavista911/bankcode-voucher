@@ -11,7 +11,7 @@
             <input type="text" name="product_code"
                    class="form-control text-uppercase <?= form_error('product_code') ? 'is-invalid' : '' ?>"
                    value="<?= set_value('product_code', $is_edit ? $product->product_code : '') ?>"
-                   placeholder="Contoh: MLBB"
+                   placeholder="Contoh: RF"
                    <?= $is_edit ? 'readonly' : '' ?>>
             <?= form_error('product_code', '<div class="invalid-feedback">', '</div>') ?>
           </div>

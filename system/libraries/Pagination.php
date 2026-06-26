@@ -499,7 +499,7 @@ class CI_Pagination {
 		// Are we using query strings?
 		if ($this->page_query_string === TRUE)
 		{
-			$this->cur_page = $this->CI->input->get($this->query_string_segment);
+			$this->cur_page = (string) $this->CI->input->get($this->query_string_segment);
 		}
 		elseif (empty($this->cur_page))
 		{

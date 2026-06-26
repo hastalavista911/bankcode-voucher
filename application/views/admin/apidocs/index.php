@@ -101,7 +101,7 @@
                   <td><code>item_code</code></td>
                   <td>string</td>
                   <td><span class="badge bg-success">Ya</span></td>
-                  <td>Kode item/SKU yang ingin dirilis vouchernya. Contoh: <code>RF-25000</code>, <code>MLBB-86-DIAMOND</code>.</td>
+                  <td>Kode item/SKU yang ingin dirilis vouchernya. Contoh: <code>RF25000</code>, <code>RF50000</code>, <code>RF100000</code>.</td>
                 </tr>
               </tbody>
             </table>
@@ -109,7 +109,7 @@
 
           <pre class="p-3 rounded mb-4" style="background:#1e1e1e;color:#d4d4d4;font-size:.85rem">{
   "order_id":  "ORD-20260625-00123",
-  "item_code": "RF-25000"
+  "item_code": "RF25000"
 }</pre>
 
           <!-- Response sukses -->
@@ -119,7 +119,7 @@
   "message": "Voucher released successfully",
   "data": {
     "order_id":      "ORD-20260625-00123",
-    "item_code":     "RF-25000",
+    "item_code":     "RF25000",
     "item_name":     "RF Return 25.000",
     "product_code":  "RF",
     "voucher_code":  "RF-AAAA-1111-BBBB",
@@ -221,7 +221,7 @@
   -H "X-API-Key: {api_key_anda}" \
   -d '{
     "order_id":  "ORD-20260625-00123",
-    "item_code": "RF-25000"
+    "item_code": "RF25000"
   }'</pre>
 
           <div class="fw-medium small mb-2">Response <span class="text-success">(200)</span></div>
@@ -230,7 +230,7 @@
   "message": "Voucher released successfully",
   "data": {
     "order_id":      "ORD-20260625-00123",
-    "item_code":     "RF-25000",
+    "item_code":     "RF25000",
     "item_name":     "RF Return 25.000",
     "product_code":  "RF",
     "voucher_code":  "RF-AAAA-1111-BBBB",

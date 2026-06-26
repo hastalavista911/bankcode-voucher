@@ -12,7 +12,8 @@ class Voucher_model extends CI_Model
                         ->from('vouchers v')
                         ->join('items i',    'i.id = v.item_id')
                         ->join('products p', 'p.id = i.product_id')
-                        ->order_by('v.created_at', 'DESC')
+                        ->order_by('ISNULL(v.expired_date)', 'ASC')
+                        ->order_by('v.expired_date', 'ASC')
                         ->limit($limit, $offset)
                         ->get()->result();
     }
@@ -69,6 +70,16 @@ class Voucher_model extends CI_Model
     public function insert_batch($data)
     {
         return $this->db->insert_batch($this->table, $data);
+    }
+
+    public function get_existing_codes(array $codes)
+    {
+        if (empty($codes)) return [];
+        $rows = $this->db->select('voucher_code')
+                         ->where_in('voucher_code', $codes)
+                         ->get($this->table)
+                         ->result_array();
+        return array_column($rows, 'voucher_code');
     }
 
     public function delete($id)

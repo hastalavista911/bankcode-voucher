@@ -98,11 +98,11 @@ Produk (platform/game)
 
 Contoh:
 ```
-Mobile Legends: Bang Bang
-└── 86 Diamond (MLBB-86-DIAMOND)
-    ├── MLBB-AAAA-1111-ZZZZ
-    ├── MLBB-BBBB-2222-YYYY
-    └── MLBB-CCCC-3333-XXXX
+RF-Return
+└── RF Return 25.000 (RF25000)
+    ├── RF-AAAA-1111-BBBB
+    ├── RF-CCCC-2222-DDDD
+    └── RF-EEEE-3333-FFFF
 ```
 
 ---
@@ -127,7 +127,7 @@ X-API-Key: {api_key}
 ```json
 {
   "order_id":  "ORD-20260625-00123",
-  "item_code": "RF-25000"
+  "item_code": "RF25000"
 }
 ```
 
@@ -139,7 +139,7 @@ X-API-Key: {api_key}
   "message": "Voucher released successfully",
   "data": {
     "order_id":      "ORD-20260625-00123",
-    "item_code":     "RF-25000",
+    "item_code":     "RF25000",
     "item_name":     "RF Return 25.000",
     "product_code":  "RF",
     "voucher_code":  "RF-AAAA-1111-BBBB",

@@ -11,11 +11,11 @@ if (!function_exists('esc')) {
 /**
  * Generate kode voucher acak.
  *
- * @param  string $kode_produk  Prefix/kode produk, contoh: 'MLBB', 'RF'
+ * @param  string $kode_produk  Prefix/kode produk, contoh: 'RF'
  * @param  string $pattern      Pola karakter: A = huruf acak, 9 = angka acak,
  *                              karakter lain diteruskan apa adanya.
  *                              Default: 'AAAA-9999-AAAA'
- * @return string  Contoh: MLBB-KXPD-4821-WZNQ
+ * @return string  Contoh: RF-KXPD-4821-WZNQ
  */
 if (!function_exists('generate_voucher_code')) {
     function generate_voucher_code($kode_produk, $pattern = 'AAAA-9999-AAAA') {

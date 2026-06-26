@@ -65,7 +65,7 @@
       <tbody>
         <?php foreach ($vouchers as $i => $v): ?>
         <tr>
-          <td class="text-muted small"><?= $v->id ?></td>
+          <td class="text-muted small"><?= $offset + $i + 1 ?></td>
           <td>
             <div class="fw-medium"><?= esc($v->product_name) ?></div>
             <small class="text-muted"><?= esc($v->product_code) ?></small>

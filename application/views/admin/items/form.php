@@ -30,7 +30,7 @@
             <input type="text" name="item_code"
                    class="form-control text-uppercase <?= form_error('item_code') ? 'is-invalid' : '' ?>"
                    value="<?= $is_edit ? esc($item->item_code) : set_value('item_code') ?>"
-                   placeholder="Contoh: MLBB-86-DIAMOND"
+                   placeholder="Contoh: RF25000"
                    <?= $is_edit ? 'readonly' : '' ?>>
             <div class="form-text">Kode unik, tidak bisa diubah setelah disimpan.</div>
             <?= form_error('item_code', '<div class="invalid-feedback">', '</div>') ?>

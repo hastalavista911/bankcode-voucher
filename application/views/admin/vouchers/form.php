@@ -28,7 +28,7 @@
             <input type="text" name="voucher_code" id="voucher_code"
                    class="form-control <?= form_error('voucher_code') ? 'is-invalid' : '' ?>"
                    value="<?= set_value('voucher_code', $generated_code) ?>"
-                   placeholder="Contoh: MLBB-ABCD-1234-EFGH">
+                   placeholder="Contoh: RF-ABCD-1234-EFGH">
             <?= form_error('voucher_code', '<div class="invalid-feedback">', '</div>') ?>
           </div>
 
@@ -73,24 +73,11 @@
       <div class="card-header bg-white fw-semibold">Import Bulk via CSV</div>
       <div class="card-body">
         <p class="text-muted small mb-3">
-          Format CSV: <code>voucher_code, serial_number (opsional), price, expired_date (opsional)</code><br>
-          Baris pertama dianggap header dan akan dilewati.
+          Format CSV: <code>item_code, voucher_code, serial_number (opsional), price, expired_date (opsional)</code><br>
+          Baris pertama dianggap header dan akan dilewati. Baris dengan <code>item_code</code> tidak dikenali akan dilewati.
         </p>
 
         <?= form_open_multipart('admin/vouchers/import') ?>
-          <div class="mb-3">
-            <label class="form-label fw-medium">Item / SKU <span class="text-danger">*</span></label>
-            <select name="item_id" class="form-select">
-              <option value="">-- Pilih Item --</option>
-              <?php foreach ($items as $it): ?>
-                <option value="<?= $it->id ?>">
-                  <?= esc($it->product_name) ?> &mdash; <?= esc($it->item_name) ?>
-                  (<?= esc($it->item_code) ?>)
-                </option>
-              <?php endforeach; ?>
-            </select>
-          </div>
-
           <div class="mb-4">
             <label class="form-label fw-medium">File CSV <span class="text-danger">*</span></label>
             <input type="file" name="csv_file" class="form-control" accept=".csv">
@@ -102,7 +89,7 @@
         <?= form_close() ?>
 
         <hr class="my-3">
-        <a href="<?= site_url('admin/vouchers/export') ?>" class="btn btn-sm btn-outline-secondary">
+        <a href="<?= site_url('admin/vouchers/template') ?>" class="btn btn-sm btn-outline-secondary">
           <i class="bi bi-download"></i> Download Template CSV
         </a>
       </div>

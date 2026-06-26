@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------
+# Environment & Credentials — JANGAN dipublish
+# ---------------------------------------------------------------
+application/config/config.php
+application/config/database.php
+
+# ---------------------------------------------------------------
+# CodeIgniter runtime
+# ---------------------------------------------------------------
+application/cache/*
+!application/cache/index.html
+
+application/logs/*
+!application/logs/index.html
+
+!application/*/.htaccess
+
+# ---------------------------------------------------------------
+# Composer
+# ---------------------------------------------------------------
+/vendor/
+composer.lock
+
+# ---------------------------------------------------------------
+# Folder internal / planning
+# ---------------------------------------------------------------
+instruction/
+database/
+
+# ---------------------------------------------------------------
+# OS & IDE
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+/nbproject/
+
+*.sublime-workspace
+*.sublime-project
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# ---------------------------------------------------------------
+# CI3 test artifacts
+# ---------------------------------------------------------------
+tests/mocks/database/ci_test.sqlite
+/tests/tests/
+/tests/results/
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
